@@ -4,37 +4,40 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
+    <groupId>org.rowley.struts</groupId>
     <artifactId>StrutsAppTutorial</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jetty-plugin.version>9.4.46.v20220331</jetty-plugin.version>
     </properties>
 
-    <build>
-        <finalName>basic-struts</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.4.7.v20170914</version>
-                <configuration>
-                    <webApp>
-                        <contextPath>basic-struts</contextPath>
-                    </webApp>
-                    <stopKey>CTRL+C</stopKey>
-                    <stopPort>8999</stopPort>
-                    <scanIntervalSeconds>10</scanIntervalSeconds>
-                    <scanTargets>
-                        <scanTarget>src/main/webapp/WEB-INF/web.xml</scanTarget>
-                    </scanTargets>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+<!--    <build>-->
+<!--        <finalName>basic-struts</finalName>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.eclipse.jetty</groupId>-->
+<!--                <artifactId>jetty-maven-plugin</artifactId>-->
+<!--                <version>9.4.7.v20170914</version>-->
+<!--                <configuration>-->
+<!--                    <webApp>-->
+<!--                        <contextPath>basic-struts</contextPath>-->
+<!--                    </webApp>-->
+<!--                    <stopKey>CTRL+C</stopKey>-->
+<!--                    <stopPort>8999</stopPort>-->
+<!--                    <scanIntervalSeconds>10</scanIntervalSeconds>-->
+<!--                    <scanTargets>-->
+<!--                        <scanTarget>src/main/webapp/WEB-INF/web.xml</scanTarget>-->
+<!--                    </scanTargets>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
     <dependencies>
         <dependency>
@@ -43,11 +46,14 @@
             <version>2.2</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
         </dependency>
+
+
     </dependencies>
 
 </project>
